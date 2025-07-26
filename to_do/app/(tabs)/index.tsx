@@ -8,7 +8,7 @@ export default function Index() {
     >
       <Text style = {styles.content}>Edit app/index.tsx to edit this screen123.</Text>
       <Text>Welcome to the To-Do App!</Text>
-      <Link href="/about">Visit about page</Link>
+     
     </View>
   );
 }
