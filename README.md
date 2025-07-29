@@ -145,8 +145,6 @@ react-native-todo-app/
 
 - **📱 iOS** - Native iOS experience
 - **🤖 Android** - Native Android experience  
-- **💻 Web** - Progressive web app
-- **🖥️ Desktop** - Electron-based desktop app (with additional setup)
 
 ## 🤝 Contributing
 
@@ -167,13 +165,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Real-time sync with [Convex](https://convex.dev/)
 - Navigation by [React Navigation](https://reactnavigation.org/)
 
-## 📞 Support
 
-If you encounter any issues or have questions:
-- 🐛 [Report bugs](https://github.com/yourusername/react-native-todo-app/issues)
-- 💡 [Request features](https://github.com/yourusername/react-native-todo-app/issues)
-- 📧 [Contact developer](mailto:your.email@example.com)
-
----
-
-**⭐ If this project helped you, please give it a star!** ⭐
