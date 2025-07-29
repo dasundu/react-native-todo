@@ -4,7 +4,7 @@ A full-stack, real-time todo application built with React Native, Expo, and Conv
 
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Convex](https://img.shields.io/badge/Convex-FF6B6B?style=for-the-badge)
 
 ## 🎯 What This App Offers
@@ -12,7 +12,7 @@ A full-stack, real-time todo application built with React Native, Expo, and Conv
 This isn't just a UI prototype—this is a **real, full-stack, real-time todo app** that:
 - ✅ Works on **physical devices & simulators** (Android / iOS)
 - ✅ Everything updates **instantly** across users (create, complete, delete)
-- ✅ No native Swift / Kotlin required—just JavaScript & React Native
+- ✅ No native Swift / Kotlin required—just TypeScript & React Native
 - ✅ Complete with dark mode, progress tracking, and real-time sync
 
 ## 📱 Download & Try
@@ -45,8 +45,8 @@ This isn't just a UI prototype—this is a **real, full-stack, real-time todo ap
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React Native + Expo
-- **Navigation**: React Navigation (Tab + Stack)
+- **Frontend**: React Native + Expo + TypeScript
+- **Navigation**: Expo Router (File-based routing)
 - **Backend**: Convex (Real-time database)
 - **Styling**: React Native StyleSheet with custom themes
 - **State Management**: React hooks + Convex queries
@@ -63,8 +63,8 @@ This isn't just a UI prototype—this is a **real, full-stack, real-time todo ap
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/react-native-todo-app.git
-   cd react-native-todo-app
+   git clone https://github.com/dasundu/react-native-todo.git
+   cd react-native-todo
    ```
 
 2. **Install dependencies**
@@ -104,30 +104,47 @@ This isn't just a UI prototype—this is a **real, full-stack, real-time todo ap
 
 Building this app covers essential React Native concepts:
 
-- 🏗️ **React Native + Expo setup** - Modern mobile development workflow
-- 🧭 **Navigation patterns** - Tab and stack navigation with React Navigation
+- 🏗️ **React Native + Expo setup** - Modern mobile development workflow with TypeScript
+- 🧭 **Navigation patterns** - File-based routing with Expo Router
 - 🧱 **Core components** - `View`, `Text`, `FlatList`, `ScrollView`, `TouchableOpacity`, `Switch`
 - 🌈 **Advanced styling** - Gradients, modals, alerts, and custom themes
 - ⚡ **Real-time backend integration** - Convex database with live updates
-- 🌓 **Theme management** - Dark mode implementation with context
+- 🌓 **Theme management** - Dark mode implementation with custom hooks
 - 🧹 **CRUD operations** - Create, read, update, delete with real-time sync
-- 📱 **Cross-platform development** - One codebase for iOS, Android, and web
+- 📱 **Cross-platform development** - One TypeScript codebase for iOS and Android
 
 ## 📂 Project Structure
 
 ```
-react-native-todo-app/
-├── App.js                 # Main app component with navigation
-├── convex/                # Convex backend configuration
-│   ├── schema.ts         # Database schema
-│   └── todos.ts          # Todo operations
-├── components/           # Reusable components
-├── screens/              # App screens
-│   ├── TodosScreen.js    # Main todos interface
-│   └── SettingsScreen.js # Settings and preferences
-├── styles/               # Styling and themes
-├── .env                  # Environment variables
-└── package.json          # Dependencies and scripts
+to_do/
+├── app/                      # Main app directory (Expo Router)
+│   ├── _layout.tsx          # Root layout
+│   └── (tabs)/              # Tab navigation group
+│       ├── _layout.tsx      # Tab layout
+│       ├── index.tsx        # Home/main tab
+│       └── settings.tsx     # Settings tab
+├── assets/                  # Static assets
+│   ├── fonts/
+│   ├── images/
+│   └── styles/
+├── components/              # Reusable components
+│   ├── DangerZone.tsx
+│   ├── EmptyState.tsx
+│   ├── Header.tsx
+│   ├── LoadingSpinner.tsx
+│   ├── Preferences.tsx
+│   ├── ProgressStats.tsx
+│   └── TodoInput.tsx
+├── convex/                  # Backend (Convex database)
+│   ├── schema.ts
+│   ├── todos.ts
+│   └── _generated/
+├── hooks/                   # Custom React hooks
+│   └── useTheme.tsx
+├── package.json            # Dependencies and scripts
+├── app.json               # Expo configuration
+├── eas.json               # Expo Application Services config
+└── tsconfig.json          # TypeScript configuration
 ```
 
 ## 🎨 Key Components Used
@@ -144,7 +161,7 @@ react-native-todo-app/
 ## 🌐 Cross-Platform Support
 
 - **📱 iOS** - Native iOS experience
-- **🤖 Android** - Native Android experience  
+- **🤖 Android** - Native Android experience
 
 ## 🤝 Contributing
 
@@ -165,4 +182,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Real-time sync with [Convex](https://convex.dev/)
 - Navigation by [React Navigation](https://reactnavigation.org/)
 
-
+---
